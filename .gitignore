@@ -1,5 +1,7 @@
 
 DEV-1.1/bin/
 DEV-1.1/obj/
+LineTest/bin/
+LineTest/obj/
 .vs/
 *.suo
