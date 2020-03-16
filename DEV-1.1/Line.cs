@@ -12,26 +12,33 @@ namespace DEV_1._1
         /// <summary>
         /// Get count of different symbol
         /// </summary>
-        /// <returns></returns>
+        /// <returns> count </returns>
         public int getCountDiffSymbol()
-        {
-            int number = 0;
-            if (LineProperty == null)
-                return number;
-            else
+        {int number = 1, result = 1;
+            if (LineProperty != null &&  LineProperty !=string.Empty)
             {
-                for (int i = 0; i < LineProperty.Length; i++)
+                for (int i = 0; i < LineProperty.Length-1; i++)
                 {
-
-                    for (int j = i + 1; j < LineProperty.Length; j++)
+                    if (LineProperty[i] != LineProperty[i + 1])
                     {
-                        if (LineProperty[i] == LineProperty[j])
-                            number++;
-                        break;
+                        number++;
+                    }
+                    else
+                    {
+                        if (number > result)
+                        {
+                            result = number;
+                        }
+
+                        number = 1;
                     }
                 }
-                return LineProperty.Length - number;
+                if (result > number)
+                    return result;
+                else
+                    return number;
             }
+            return 0;
         }
     }
 
