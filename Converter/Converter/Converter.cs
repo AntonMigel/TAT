@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace Converter
 {
     class Converter
@@ -12,15 +7,19 @@ namespace Converter
         /// Convert number to various systems(2-20)
         /// </summary>
         /// <returns>result</returns>
-        public static string convertVariousSystem(string number, string Radix )
+        public static string ConvertVariousSystem(string number, string Radix )
         {
             const int BitsInIng = 32;
             const string Digits = "0123456789ABCDEFGHIJ";
             int decimalNumber = Convert.ToInt32(number);
             int radix = Convert.ToInt32(Radix);
 
+            if (radix < 2 || radix > 20)
+                throw new ArgumentException("The radix must be >= 2 and <=20 " );
             if (decimalNumber == 0)
+            {
                 return "0";
+            }
             int index = BitsInIng - 1;
             char[] charArray = new char[BitsInIng];
 
