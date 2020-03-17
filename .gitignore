@@ -3,5 +3,8 @@ DEV-1.1/bin/
 DEV-1.1/obj/
 LineTest/bin/
 LineTest/obj/
+Converter/Converter/bin/
+Converter/Converter/obj/
+Converter/.vs/
 .vs/
 *.suo
