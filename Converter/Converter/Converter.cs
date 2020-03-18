@@ -1,7 +1,7 @@
 ﻿using System;
 namespace Converter
 {
-    class Converter
+   public  class  сonvertFromDec
     {
         /// <summary>
         /// Convert number to various systems(2-20)
