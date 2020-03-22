@@ -5,29 +5,34 @@ namespace Transport
     class Scooter : Vehicle
     {
         private const string typeOfVehicle = "Scooter";
-        private string _producingCountry;
-        public string ProducingCountry 
+        private string _owner;
+        public string Owner 
         { 
-            get => _producingCountry;
+            get => _owner;
             set 
             {
                 if (value == null || value == string.Empty)
                 {
                     throw new ArgumentException();
                 }
-                _producingCountry = value;
+                foreach (char c in value)
+                {
+                    if (!Char.IsLetter(c))
+                        throw new ArgumentException();
+                }
+                _owner = value;
             }
         }
-        public Scooter(Engine engine, Chassis chassis, Transmission transmission,string producingCountry )
+        public Scooter(Engine engine, Chassis chassis, Transmission transmission,string owner )
               : base(engine, chassis, transmission, typeOfVehicle)
         {
-            ProducingCountry = producingCountry;
+            Owner = owner;
         }
         public override void getInformation()
         {
             
             base.getInformation();
-            Console.WriteLine("Producing Country is  " + ProducingCountry);
+            Console.WriteLine(" Owner : " + Owner);
         }
     }
 }

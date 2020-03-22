@@ -20,6 +20,11 @@ namespace Transport
                 {
                     throw new ArgumentException();
                 }
+                foreach (char c in value)
+                {
+                    if (!Char.IsLetter(c))
+                        throw new ArgumentException();
+                }
                 _type = value;
             }
         }
@@ -32,6 +37,11 @@ namespace Transport
                 {
                     throw new ArgumentException();
                 }
+                foreach (char c in value)
+                {
+                    if (!Char.IsLetterOrDigit(c))
+                        throw new ArgumentException();
+                }
                 _serialNumber = value;
             }
         }
@@ -39,7 +49,7 @@ namespace Transport
         {
             Power = 0;
             Volume = 0f;
-            Type = "0";
+            Type = "o";
             SerialNumber = "0";
         }
 

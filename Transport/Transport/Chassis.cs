@@ -17,6 +17,11 @@ namespace Transport
                 {
                     throw new ArgumentException();
                 }
+                foreach (char c in value)
+                {
+                    if (!Char.IsLetterOrDigit(c))
+                        throw new ArgumentException();
+                }
                 _number = value;
             }
         }

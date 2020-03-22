@@ -16,7 +16,12 @@ namespace Transport
                 {
                     throw new ArgumentException();
                 }
-                _type = value;
+                foreach (char c in value)
+                {
+                  if (!Char.IsLetter(c))
+                    throw new ArgumentException();
+                }
+                 _type = value;
             }
 
         }
@@ -30,14 +35,19 @@ namespace Transport
                 {
                     throw new ArgumentException();
                 }
+                foreach (char c in value)
+                {
+                    if (!Char.IsLetter(c))
+                        throw new ArgumentException();
+                }
                 _manufacturer = value;
             }
         }
         public Transmission()
         {
-            Type = "0";
+            Type = "o";
             NumberOfGears = 0;
-            Manufacturer = "0";
+            Manufacturer = "o";
         }
         public void getInformation()
         {
