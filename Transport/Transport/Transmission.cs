@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Transport
 {
@@ -9,9 +7,32 @@ namespace Transport
         private string _type;
         private int _numberOfGears;
         private string _manufacturer;
-        public string Type { get; set; }
+        public string Type 
+        {
+            get => _type;
+            set
+            {
+                if (value == null || value == string.Empty)
+                {
+                    throw new ArgumentException();
+                }
+                _type = value;
+            }
+
+        }
         public int NumberOfGears { get; set; }
-        public string Manufacturer { get; set; }
+        public string Manufacturer 
+        { 
+            get => _manufacturer;
+            set 
+            {
+                if (value == null || value == string.Empty)
+                {
+                    throw new ArgumentException();
+                }
+                _manufacturer = value;
+            }
+        }
         public Transmission()
         {
             Type = "0";

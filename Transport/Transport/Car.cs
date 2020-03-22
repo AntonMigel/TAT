@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Transport
+﻿namespace Transport
 {
-     class Car: Vehicle
+    class Car: Vehicle
     {
        private const string typeOfVehicle = "Car";
         public Car(Engine engine, Chassis chassis, Transmission transmission)
@@ -15,6 +11,5 @@ namespace Transport
         {
             base.getInformation();
         }
-
     }
 }

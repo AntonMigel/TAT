@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Transport
 {
@@ -25,6 +23,5 @@ namespace Transport
             _chassis.getInformation();
             _transmission.getInformation();
         }
-
     }
 }

@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Transport
 {
@@ -10,7 +8,18 @@ namespace Transport
         private string _number;
         private double _permissibleLoad;
         public int NumberOfWheels { get; set; }
-        public string Number { get; set; }
+        public string Number 
+        {
+            get => _number;
+            set
+            {
+                if (value == null || value == string.Empty)
+                {
+                    throw new ArgumentException();
+                }
+                _number = value;
+            }
+        }
         public double PermissibleLoad { get; set; }
         public Chassis()
         {

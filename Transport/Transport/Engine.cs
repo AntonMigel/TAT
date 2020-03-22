@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Transport
 {
@@ -13,8 +11,30 @@ namespace Transport
 
         public int Power { get; set; }
         public float Volume { get; set; }
-        public string Type { get; set; }
-        public string SerialNumber { get; set; }
+        public string Type 
+        {
+            get => _type;
+            set
+            {
+                if (value == null || value == string.Empty)
+                {
+                    throw new ArgumentException();
+                }
+                _type = value;
+            }
+        }
+        public string SerialNumber 
+        {
+            get => _serialNumber;
+            set
+            {
+                if (value == null || value == string.Empty)
+                {
+                    throw new ArgumentException();
+                }
+                _serialNumber = value;
+            }
+        }
         public Engine()
         {
             Power = 0;
