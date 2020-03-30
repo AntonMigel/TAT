@@ -6,7 +6,9 @@ namespace task_DEV_1._4
 {
     class Plane : IFlyable 
     {
+        const int MaxDistance = 2500;
         private int _speed = 200;
+        private Coordinate _currentPoint;
         public Plane(Coordinate currentPoint)
         {
             CurrentPoint = currentPoint;
@@ -20,9 +22,13 @@ namespace task_DEV_1._4
         public float GetFlyTime(Coordinate destinationPoint)
         {
             float distance = destinationPoint.getDistance(CurrentPoint);
-            float time = 0;
-      
-            return time = distance / Speed;
+            if (distance > MaxDistance)
+            {
+                throw new Exception("Maximum flight range" + MaxDistance);
+            }
+            float finalSpeed = distance + Speed;
+            float acceleration = (float)(Math.Pow((finalSpeed), 2) + Math.Pow((Speed), 2))/(2*distance);
+            return (finalSpeed-Speed) / acceleration;
         }
     }
 }
