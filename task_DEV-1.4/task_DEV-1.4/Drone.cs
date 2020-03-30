@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace task_DEV_1._4
 {
@@ -23,12 +21,12 @@ namespace task_DEV_1._4
         }
         public float GetFlyTime(Coordinate destinationPoint)
         {
-            float time, stoptime ;
+            float time, stoptime;
             if (destinationPoint.getDistance(CurrentPoint) > MaxDistance)
             {
                 throw new Exception("The drone can't fly more than that"+MaxDistance);
             }
-            time =destinationPoint.getDistance(CurrentPoint) / Speed;
+            time =destinationPoint.getDistance(CurrentPoint) / _speed;
             stoptime = time / StopTime;
             return time+stoptime;
         }

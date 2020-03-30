@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace task_DEV_1._4
 {
@@ -26,9 +24,9 @@ namespace task_DEV_1._4
             {
                 throw new Exception("Maximum flight range" + MaxDistance);
             }
-            float finalSpeed = distance + Speed;
-            float acceleration = (float)(Math.Pow((finalSpeed), 2) + Math.Pow((Speed), 2))/(2*distance);
-            return (finalSpeed-Speed) / acceleration;
+            float finalSpeed = distance + _speed;
+            float acceleration = (float)(Math.Pow((finalSpeed), 2) + Math.Pow((_speed), 2))/(2*distance);
+            return (finalSpeed-_speed) / acceleration;
         }
     }
 }
