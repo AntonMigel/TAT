@@ -12,7 +12,7 @@ namespace Transport
             get => _type;
             set
             {
-                if (value == null || value == string.Empty)
+                if (String.IsNullOrEmpty(value))
                 {
                     throw new ArgumentException();
                 }
@@ -31,7 +31,7 @@ namespace Transport
             get => _manufacturer;
             set 
             {
-                if (value == null || value == string.Empty)
+                if (String.IsNullOrEmpty(value))
                 {
                     throw new ArgumentException();
                 }

@@ -13,7 +13,7 @@ namespace Transport
             get => _number;
             set
             {
-                if (value == null || value == string.Empty)
+                if (String.IsNullOrEmpty(value))
                 {
                     throw new ArgumentException();
                 }

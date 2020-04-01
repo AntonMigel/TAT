@@ -11,7 +11,7 @@ namespace Transport
             get => _owner;
             set 
             {
-                if (value == null || value == string.Empty)
+                if (String.IsNullOrEmpty(value))
                 {
                     throw new ArgumentException();
                 }

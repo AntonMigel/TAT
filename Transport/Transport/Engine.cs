@@ -33,7 +33,7 @@ namespace Transport
             get => _serialNumber;
             set
             {
-                if (value == null || value == string.Empty)
+                if (String.IsNullOrEmpty(value))
                 {
                     throw new ArgumentException();
                 }
