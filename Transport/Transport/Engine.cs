@@ -45,12 +45,12 @@ namespace Transport
                 _serialNumber = value;
             }
         }
-        public Engine()
+        public Engine(int power,float volume,string type,string serialnumber)
         {
-            Power = 0;
-            Volume = 0f;
-            Type = "o";
-            SerialNumber = "0";
+            Power = power;
+            Volume = volume;
+            Type = type;
+            SerialNumber = serialnumber;
         }
 
         public void getInformation()

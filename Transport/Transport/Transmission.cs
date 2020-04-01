@@ -43,11 +43,11 @@ namespace Transport
                 _manufacturer = value;
             }
         }
-        public Transmission()
+        public Transmission(string type,int numberofgears,string manufacturer)
         {
-            Type = "o";
-            NumberOfGears = 0;
-            Manufacturer = "o";
+            Type = type;
+            NumberOfGears = numberofgears;
+            Manufacturer = manufacturer;
         }
         public void getInformation()
         {

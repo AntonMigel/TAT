@@ -26,11 +26,11 @@ namespace Transport
             }
         }
         public double PermissibleLoad { get; set; }
-        public Chassis()
+        public Chassis(int numberofwheels,string number,double premissibleload)
         {
-            NumberOfWheels = 0;
-            Number = "0";
-            PermissibleLoad = 0.0;
+            NumberOfWheels =numberofwheels;
+            Number = number;
+            PermissibleLoad = premissibleload;
         }
         public void getInformation()
         {
