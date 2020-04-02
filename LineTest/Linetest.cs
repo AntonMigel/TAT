@@ -11,21 +11,21 @@ namespace LineTest
         public void testGetNumberDiffSymbol()
         {
             int expected = 3;
-            Line line = new Line("aba");
+            StringProcessor line = new StringProcessor("aba");
             Assert.AreEqual(line.getCountDiffSymbol(), expected);
         }
         [TestMethod]
         public void testNUllValue()
         {
             int expected =0;
-            Line line = new Line(null);
+            StringProcessor line = new StringProcessor(null);
             Assert.AreEqual(line.getCountDiffSymbol(), expected);
         }
         [TestMethod]
         public void testEmptyValue()    
         {
             int expected = 0;
-            Line line = new Line(String.Empty);
+            StringProcessor line = new StringProcessor(String.Empty);
             Assert.AreEqual(line.getCountDiffSymbol(), expected);
         }
     }
