@@ -1,12 +1,9 @@
 ﻿using System;
+
 namespace Converter
 {
    public  class  сonvertFromDec
     {
-        /// <summary>
-        /// Convert number to various systems(2-20)
-        /// </summary>
-        /// <returns>result</returns>
         public static string ConvertVariousSystem(string number, string Radix )
         {
             const int BitsInIng = 32;
