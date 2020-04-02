@@ -10,20 +10,14 @@ namespace Transport
             try
             {
                 List<Vehicle> autopark = new List<Vehicle>();
-                Creator[] CreatorAutomatic = new AutomaticTransmissionFactory[2];
-                Creator[] CreatorManual = new ManualTransmissionFactory[3];
-                Creator[] CreatorBus = new BusFactory[2];
-                Creator[] CreatorTruck = new BusFactory[2];
-                autopark.Add(CreatorAutomatic[1].Create());
-                autopark.Add(CreatorAutomatic[2].Create());
-                autopark.Add(CreatorManual[1].Create());
-                autopark.Add(CreatorManual[2].Create());
-                autopark.Add(CreatorManual[3].Create());
-                autopark.Add(CreatorBus[1].Create());
-                autopark.Add(CreatorBus[2].Create());
-                autopark.Add(CreatorTruck[1].Create());
-                autopark.Add(CreatorTruck[2].Create());
-                
+                Creator CreatorAutomatic = new AutomaticTransmissionFactory();
+                Creator CreatorManual = new ManualTransmissionFactory();
+                Creator CreatorBus = new BusFactory();
+                Creator CreatorTruck = new BusFactory();
+                autopark.Add(CreatorAutomatic.Create());
+                autopark.Add(CreatorManual.Create());
+                autopark.Add(CreatorBus.Create());
+                autopark.Add(CreatorTruck.Create());
             }
             catch (Exception Exc)
             {
