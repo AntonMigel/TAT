@@ -1,0 +1,9 @@
+
+
+/Converter/Converter/bin/
+/Converter/Converter/obj/
+/Converter/TestResults/
+/Converter/UnitTest/bin/
+/Converter/UnitTest/obj/
+Converter/.vs/
+*.suo
