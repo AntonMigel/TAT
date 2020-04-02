@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Transport
 {
@@ -8,13 +9,21 @@ namespace Transport
         {
             try
             {
-                Engine engine = new Engine(90, 1.8f, "Gasoline", "A24rdf4");
-                Transmission transmission = new Transmission("reardrive", 5, "VM");
-                Chassis chassis = new Chassis(4, "adsad3", 3000);
-                Vehicle car = new Car(engine,  chassis, transmission);
-                car.getInformation();
-                Vehicle bus = new Bus(engine, chassis, transmission);
-                bus.getInformation();
+                List<Vehicle> autopark = new List<Vehicle>();
+                Creator[] CreatorAutomatic = new AutomaticTransmissionFactory[2];
+                Creator[] CreatorManual = new ManualTransmissionFactory[3];
+                Creator[] CreatorBus = new BusFactory[2];
+                Creator[] CreatorTruck = new BusFactory[2];
+                autopark.Add(CreatorAutomatic[1].Create());
+                autopark.Add(CreatorAutomatic[2].Create());
+                autopark.Add(CreatorManual[1].Create());
+                autopark.Add(CreatorManual[2].Create());
+                autopark.Add(CreatorManual[3].Create());
+                autopark.Add(CreatorBus[1].Create());
+                autopark.Add(CreatorBus[2].Create());
+                autopark.Add(CreatorTruck[1].Create());
+                autopark.Add(CreatorTruck[2].Create());
+                
             }
             catch (Exception Exc)
             {
