@@ -4,7 +4,7 @@ namespace DEV_1._1
     public class StringProcessor
     {
         private string _line;
-        public Line(string arr)
+        public StringProcessor(string arr)
         {
             Line = arr;
         }
