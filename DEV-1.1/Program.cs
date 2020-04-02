@@ -6,6 +6,9 @@ namespace DEV_1._1
     {
         static void Main(string[] args)
         {
+           string line = Console.ReadLine();
+           StringProcessor stringProcessor = new StringProcessor(line);
+           Console.WriteLine(stringProcessor.getCountDiffSymbol());
         }
     }
 }
