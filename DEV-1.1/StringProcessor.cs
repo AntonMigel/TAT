@@ -1,25 +1,21 @@
 
 namespace DEV_1._1
 {
-    public class Line
+    public class StringProcessor
     {
         private string _line;
         public Line(string arr)
         {
-            LineProperty = arr;
+            Line = arr;
         }
-        public string LineProperty { get; set; }
-        /// <summary>
-        /// Get count of different symbol
-        /// </summary>
-        /// <returns> count </returns>
+        public string Line { get; set; }
         public int getCountDiffSymbol()
         {int number = 1, result = 1;
-            if (LineProperty != null &&  LineProperty !=string.Empty)
+            if (String.IsNullOrEmpty(Line))
             {
-                for (int i = 0; i < LineProperty.Length-1; i++)
+                for (int i = 0; i < Line.Length-1; i++)
                 {
-                    if (LineProperty[i] != LineProperty[i + 1])
+                    if (Line[i] != Line[i + 1])
                     {
                         number++;
                     }
