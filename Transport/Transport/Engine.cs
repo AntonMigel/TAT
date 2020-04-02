@@ -16,7 +16,7 @@ namespace Transport
             get => _type;
             set
             {
-                if (value == null || value == string.Empty)
+                if (String.IsNullOrEmpty(value))
                 {
                     throw new ArgumentException();
                 }
