@@ -6,7 +6,15 @@ namespace task_DEV_2._1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            try
+            {
+                Invoker console = new Invoker();
+                console.Show();
+            }
+            catch (Exception exception)
+            {
+                Console.WriteLine(exception.Message);
+            }
         }
     }
 }
