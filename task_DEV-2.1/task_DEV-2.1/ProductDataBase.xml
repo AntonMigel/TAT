@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Data>
+  <CarProducts>
+    <brand>BMW</brand>
+    <model>e34</model>
+    <count>5</count>
+    <price>200</price>
+  </CarProducts>
+  <CarProducts>
+    <brand>Audi</brand>
+    <model>80</model>
+    <count>6</count>
+    <price>150</price>
+  </CarProducts>
+  <CarProducts>
+    <brand>VOLVO</brand>
+    <model>s60</model>
+    <count>3</count>
+    <price>220</price>
+  </CarProducts>
+  <CarProducts>
+    <brand>volkswagen</brand>
+    <model>polo</model>
+    <count>8</count>
+    <price>210</price>
+  </CarProducts>
+</Data>
