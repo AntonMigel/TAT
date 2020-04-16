@@ -2,7 +2,7 @@
 
 namespace task_DEV_1._4
 {
-    class Plane : IFlyable 
+    public class Plane : IFlyable 
     {
         const int MaxDistance = 2500;
         private int _speed = 200;

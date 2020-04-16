@@ -2,7 +2,7 @@
 
 namespace task_DEV_1._4
 {
-    class Drone : IFlyable
+    public class Drone : IFlyable
     {
         const int StopTime = 10;
         const int MaxDistance = 1000;

@@ -2,7 +2,7 @@
 
 namespace task_DEV_1._4
 {
-    class Bird : IFlyable
+    public class Bird : IFlyable
     {   
         const int min = 0, max = 20;
         private Coordinate _currentPoint;

@@ -2,7 +2,7 @@
 
 namespace task_DEV_1._4
 {
-    struct Coordinate
+    public struct Coordinate
     {
 
         private float _x;
