@@ -29,7 +29,8 @@ namespace task_DEV_2._1
         }
 
         public void AddToBase(CarProduct product)
-        { 
+        {
+            Xml.UpgradeXmlData(product);
             ProductList.Add(product);
         }
     }
