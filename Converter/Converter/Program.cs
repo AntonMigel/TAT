@@ -11,9 +11,10 @@ namespace Converters
                 Console.WriteLine("Input Value:");
                 double inputvalue = Convert.ToDouble(Console.ReadLine());
                 Console.WriteLine("\nCommand:\n" + "FC\n" +
-                             "CF\n" + "FM\n" + "MF\n" 
-                              );
-                IConverterFactory converterFactory = FactoryCreator.CreateSpecificFactory("MF");
+                             "CF\n" + "FM\n" + "MF\n" );
+                Console.WriteLine("Input Command:");
+                string command = Console.ReadLine();
+                IConverterFactory converterFactory = FactoryCreator.CreateSpecificFactory(command);
                 IConverter converter = converterFactory.Create();
                 Console.WriteLine(converter.Convert(inputvalue));
             }

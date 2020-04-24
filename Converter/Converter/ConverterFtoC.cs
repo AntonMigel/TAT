@@ -2,9 +2,11 @@
 {
     class ConverterFtoC : IConverter
     {
+        const double firstBinder = 5 / 9;
+        const int secondBinder = 32;
         public double Convert(double inputvalue)
         {
-            return 5 * (inputvalue-32) / 9 ;
+            return firstBinder * (inputvalue- secondBinder) ;
         }
     }
 }
