@@ -1,0 +1,78 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "task_DEV-2.3/1.0.0": {
+        "dependencies": {
+          "Selenium.Support": "3.14.0",
+          "Selenium.WebDriver": "3.14.0"
+        },
+        "runtime": {
+          "task_DEV-2.3.dll": {}
+        }
+      },
+      "Newtonsoft.Json/11.0.2": {
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "11.0.0.0",
+            "fileVersion": "11.0.2.21924"
+          }
+        }
+      },
+      "Selenium.Support/3.14.0": {
+        "dependencies": {
+          "Selenium.WebDriver": "3.14.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/WebDriver.Support.dll": {
+            "assemblyVersion": "3.14.0.0",
+            "fileVersion": "3.14.0.0"
+          }
+        }
+      },
+      "Selenium.WebDriver/3.14.0": {
+        "dependencies": {
+          "Newtonsoft.Json": "11.0.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/WebDriver.dll": {
+            "assemblyVersion": "3.14.0.0",
+            "fileVersion": "3.14.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "task_DEV-2.3/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Newtonsoft.Json/11.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-IvJe1pj7JHEsP8B8J8DwlMEx8UInrs/x+9oVY+oCD13jpLu4JbJU2WCIsMRn5C4yW9+DgkaO8uiVE5VHKjpmdQ==",
+      "path": "newtonsoft.json/11.0.2",
+      "hashPath": "newtonsoft.json.11.0.2.nupkg.sha512"
+    },
+    "Selenium.Support/3.14.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-FhZzfKr1M9zcWWPaiWRTRB+7IC+m8oAUelI5tKn71LIO5aNWdYBv+oDnoyqYefvt5f+sj+jLE7EupOw9oy0rMQ==",
+      "path": "selenium.support/3.14.0",
+      "hashPath": "selenium.support.3.14.0.nupkg.sha512"
+    },
+    "Selenium.WebDriver/3.14.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-hkNeyxU8S/cojFQfHg1R234R0GtYxJG1iJ403sRKiGSE/6mW3vHCvG3uUDwFqzoTfMNSChHymuSwsFbT1EAd6w==",
+      "path": "selenium.webdriver/3.14.0",
+      "hashPath": "selenium.webdriver.3.14.0.nupkg.sha512"
+    }
+  }
+}
