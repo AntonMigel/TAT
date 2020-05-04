@@ -8,12 +8,9 @@ namespace Converters
         {
             try
             {
-                Console.WriteLine("Input Value:");
-                double inputvalue = Convert.ToDouble(Console.ReadLine());
-                Console.WriteLine("\nCommand:\n" + "FC\n" +
-                             "CF\n" + "FM\n" + "MF\n" );
-                Console.WriteLine("Input Command:");
-                string command = Console.ReadLine();
+                // Command: FC , CF , FM , MF
+                double inputvalue = Convert.ToDouble(args[0]);
+                string command = args[1];
                 IConverterFactory converterFactory = FactoryCreator.CreateSpecificFactory(command);
                 IConverter converter = converterFactory.Create();
                 Console.WriteLine(converter.Convert(inputvalue));
