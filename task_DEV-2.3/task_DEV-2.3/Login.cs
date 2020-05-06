@@ -1,7 +1,5 @@
 ﻿using OpenQA.Selenium;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using OpenQA.Selenium.Support.UI;
 
 namespace task_DEV_2._3
 {
@@ -17,16 +15,21 @@ namespace task_DEV_2._3
             _driver = driver;
         }
         public Login LogIN(string Login, string Password) 
-        {   
-            IWebElement login = _driver.FindElement(By.XPath(LOGIN));
+        {
+            IWebElement login = WaitUntilElementExist(LOGIN);
             login.SendKeys(Login);
-            IWebElement loginbutton = _driver.FindElement(By.XPath(BUTTON));
+            IWebElement loginbutton = WaitUntilElementExist(BUTTON);
             loginbutton.Click();
-            IWebElement password = _driver.FindElement(By.XPath(PASSWORD));
+            IWebElement password = WaitUntilElementExist(PASSWORD);
             password.SendKeys(Password);
-            IWebElement passwordbutton = _driver.FindElement(By.XPath(BUTTON));
+            IWebElement passwordbutton = WaitUntilElementExist(BUTTON);
             passwordbutton.Click();
             return this;
+        }
+        private IWebElement WaitUntilElementExist(string xpathString)
+        {
+            return new WebDriverWait(_driver, System.TimeSpan.FromSeconds(20))
+                              .Until(ExpectedConditions.ElementExists(By.XPath(xpathString)));
         }
     }
 }

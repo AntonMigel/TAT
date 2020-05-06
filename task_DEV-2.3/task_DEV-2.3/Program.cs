@@ -1,6 +1,5 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
-using System;
 
 namespace task_DEV_2._3
 {
@@ -13,7 +12,7 @@ namespace task_DEV_2._3
             Login log = new Login(driver);
             log.LogIN("tattovich", "uA7pA3oPTah[");
             Message message = new Message(driver);
-            message.WriteMessage("sghcj");
+            message.WriteMessage("");
         }
     }
 }

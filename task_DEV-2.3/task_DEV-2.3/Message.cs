@@ -29,6 +29,7 @@ namespace task_DEV_2._3
             ButtonSend.Click();
             return this;
         }
+
         private IWebElement WaitUntilElementExist(string xpathString)
         {
             return new WebDriverWait(_driver, System.TimeSpan.FromSeconds(20))
