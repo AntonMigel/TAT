@@ -13,7 +13,7 @@ namespace task_DEV_2._3
             Login log = new Login(driver);
             log.LogIN("tattovich", "uA7pA3oPTah[");
             Message message = new Message(driver);
-            message.WriteMessage("");
+            message.WriteMessage("sghcj");
         }
     }
 }
